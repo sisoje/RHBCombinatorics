@@ -73,13 +73,13 @@ class Tests: XCTestCase {
     func testCombinations() {
         
         verifyCombinations(RHBCombinations(N: 4, K: 2), results:[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]])
-        verifyCombinations(RHBCombinations(N: 1, K: 1), results:[[0]])
         verifyCombinations(RHBCombinations(N: 2, K: 1), results:[[0],[1]])
         verifyCombinations(RHBCombinations(N: 3, K: 1), results:[[0],[1],[2]])
         verifyCombinations(RHBCombinations(N: 3, K: 2), results:[[0,1],[0,2],[1,2]])
         verifyCombinations(RHBCombinations(N: 4, K: 3), results:[[0,1,2],[0,1,3],[0,2,3],[1,2,3]])
-        verifyCombinations(RHBCombinations(N: 5, K: 5), results:[[0,1,2,3,4]])
-        
+        (1...100).forEach {
+            verifyCombinations(RHBCombinations(N: $0, K: $0), results: [Array(0..<$0)])
+        }
     }
     
     func testCombinationsLoop() {
