@@ -67,8 +67,8 @@ public func nextCombination(combination: [Int], N: Int, K: Int) -> [Int]? {
 
 public struct RHBCombinationIterator : IteratorProtocol {
     
-    public let N:Int
-    public let K:Int
+    let N:Int
+    let K:Int
     var combination:[Int]?
     init(N: Int, K: Int) {
         
