@@ -1,5 +1,3 @@
-# RHBCombinatorics
-
 [![CI Status](http://img.shields.io/travis/Lazar Otasevic/RHBCombinatorics.svg?style=flat)](https://travis-ci.org/Lazar Otasevic/RHBCombinatorics)
 [![Version](https://img.shields.io/cocoapods/v/RHBCombinatorics.svg?style=flat)](http://cocoapods.org/pods/RHBCombinatorics)
 [![License](https://img.shields.io/cocoapods/l/RHBCombinatorics.svg?style=flat)](http://cocoapods.org/pods/RHBCombinatorics)
