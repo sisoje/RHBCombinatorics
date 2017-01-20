@@ -1,0 +1,6 @@
+framework module Pods_RHBCombinatorics_Tests {
+  umbrella header "Pods-RHBCombinatorics_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

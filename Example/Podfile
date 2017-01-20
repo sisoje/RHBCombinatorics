@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RHBCombinatorics_Example' do
+  pod 'RHBCombinatorics', :path => '../'
+
+  target 'RHBCombinatorics_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

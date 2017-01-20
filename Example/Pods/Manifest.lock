@@ -1,0 +1,16 @@
+PODS:
+  - RHBCombinatorics (0.1.0)
+
+DEPENDENCIES:
+  - RHBCombinatorics (from `../`)
+
+EXTERNAL SOURCES:
+  RHBCombinatorics:
+    :path: ../
+
+SPEC CHECKSUMS:
+  RHBCombinatorics: 5810eedc4719bc75fdf55d279bd1a3b8d538b85f
+
+PODFILE CHECKSUM: b2b2fd61b5205504950af8f46a29c3533f912103
+
+COCOAPODS: 1.0.1

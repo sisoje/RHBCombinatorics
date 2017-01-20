@@ -1,0 +1,6 @@
+framework module RHBCombinatorics {
+  umbrella header "RHBCombinatorics-umbrella.h"
+
+  export *
+  module * { export * }
+}
