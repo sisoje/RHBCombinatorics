@@ -5,11 +5,24 @@
 [![License](https://img.shields.io/cocoapods/l/RHBCombinatorics.svg?style=flat)](http://cocoapods.org/pods/RHBCombinatorics)
 [![Platform](https://img.shields.io/cocoapods/p/RHBCombinatorics.svg?style=flat)](http://cocoapods.org/pods/RHBCombinatorics)
 
-## Example
+## Looping trough combinations made easy
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Following snippet:
 
-## Requirements
+        let combinatons = RHBCombinations(N: 4, K: 3)
+        for combinationIndex in 0..<combinatons.count {
+            
+            let combination = combinatons[combinationIndex]
+            print(combination)
+        }
+Produces following output:
+
+```ruby
+0 [0, 1, 2]
+1 [0, 1, 3]
+2 [0, 2, 3]
+3 [1, 2, 3]
+```
 
 ## Installation
 
@@ -22,7 +35,7 @@ pod "RHBCombinatorics"
 
 ## Author
 
-Lazar Otasevic, lazar.otasevic@1und1.de
+Lazar Otasevic, redhotbits@gmail.com
 
 ## License
 

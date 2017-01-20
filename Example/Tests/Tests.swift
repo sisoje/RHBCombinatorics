@@ -79,6 +79,17 @@ class Tests: XCTestCase {
         verifyCombinations(RHBCombinations(N: 3, K: 2), results:[[0,1],[0,2],[1,2]])
         verifyCombinations(RHBCombinations(N: 4, K: 3), results:[[0,1,2],[0,1,3],[0,2,3],[1,2,3]])
         verifyCombinations(RHBCombinations(N: 5, K: 5), results:[[0,1,2,3,4]])
+        
+    }
+    
+    func testCombinationsLoop() {
+        
+        let combinatons = RHBCombinations(N: 4, K: 3)
+        for combinationIndex in 0..<combinatons.count {
+            
+            let combination = combinatons[combinationIndex]
+            print(combinationIndex, combination)
+        }
     }
     
     func testPerformanceExample() {
@@ -86,14 +97,14 @@ class Tests: XCTestCase {
         // This is an example of a performance test case.
         self.measure() {
 
-            let combinator = RHBCombinations(N: 12, K: 6)
-            for combinationIndex in 0..<combinator.count {
+            let combinatons = RHBCombinations(N: 12, K: 6)
+            for combinationIndex in 0..<combinatons.count {
                 
-                let combination = combinator[combinationIndex]
-                XCTAssert(combination.count == combinator.K)
+                let combination = combinatons[combinationIndex]
+                XCTAssert(combination.count == combinatons.K)
                 combination.forEach {
                     
-                    XCTAssert($0 < combinator.N)
+                    XCTAssert($0 < combinatons.N)
                 }
                 XCTAssert(combination.sorted() == combination)
                 XCTAssert(Set(combination).sorted() == combination)
