@@ -115,8 +115,8 @@ public struct RHBCombinations : Sequence, Collection {
     
     public init(N:Int, K:Int) {
         
-        self.N = N;
-        self.K = K;
+        self.N = N
+        self.K = K
         self.count = choose(N: N, K: K)
     }
     
