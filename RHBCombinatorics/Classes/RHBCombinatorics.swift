@@ -46,20 +46,20 @@ func firstElementInCombination(index:Int, N:Int, K:Int) -> (element:Int, countLo
     return (NK, sum)
 }
 
-open class RHBCombinations {
-
-    open let N:Int
-    open let K:Int
-    open let count:Int
-
+public struct RHBCombinations {
+    
+    public let N:Int
+    public let K:Int
+    public let count:Int
+    
     public init(N:Int, K:Int) {
         
-        self.N = N
-        self.K = K
+        self.N = N;
+        self.K = K;
         self.count = choose(N: N, K: K)
     }
     
-    func combinationAt(index:Int) -> [Int] {
+    public func combinationAt(index:Int) -> [Int] {
         
         assert(index >= 0)
         assert(index < self.count)
@@ -76,7 +76,7 @@ open class RHBCombinations {
         }
     }
     
-    open subscript(index:Int) -> [Int] {
+    public subscript(index:Int) -> [Int] {
         
         return combinationAt(index:index)
     }
