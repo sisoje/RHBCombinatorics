@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RHBCombinatorics'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'Provide iterator and indexed access to combinations.'
 
 # This description is used to generate tags and improve search results.
@@ -29,7 +29,7 @@ Provide indexed access to combinations, iterate trough them, indexing...
   # s.social_media_url = 'https://twitter.com/redhotbits'
 
   s.ios.deployment_target = '8.0'
-  s.watchos.deployment_target = '3.0'
+  s.watchos.deployment_target = '2.0'
   s.osx.deployment_target = '10.9'
   s.tvos.deployment_target = '9.0'   
   
