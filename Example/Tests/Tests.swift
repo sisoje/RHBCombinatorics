@@ -24,11 +24,6 @@ class Tests: XCTestCase {
                     
                     $0 + choose(N: N - $1 - 1, K: K - 1)
                 }
-                let summed1 = (K-1...N-1).reduce(0) {
-                    
-                    $0 + choose(N: $1, K: K - 1)
-                }
-                XCTAssert(summed == summed1)
                 XCTAssert(summed == choose(N: N, K: K))
             }
         }
@@ -53,6 +48,9 @@ class Tests: XCTestCase {
         (1...100).forEach {
             
             XCTAssert(choose(N:$0, K: $0) == 1)
+        }
+        (1...100).forEach {
+            
             XCTAssert(choose(N:$0+1, K: $0) == $0+1)
         }
         XCTAssert(choose(N: 49, K:6) == 13983816)
@@ -62,37 +60,30 @@ class Tests: XCTestCase {
     func verifyCombinations(_ combinations:RHBCombinations, results:[[Int]]) {
         
         XCTAssert(results.count == combinations.count)
-        for combinationIndex in 0..<combinations.count {
+        (0..<combinations.count).forEach {
             
-            let calculatedCombination = combinations[combinationIndex]
-            let givenCombination = results[combinationIndex]
-            XCTAssert(calculatedCombination == givenCombination)
+            XCTAssert(combinations[$0] == results[$0])
         }
     }
     
-    func testCombinationsExamples() {
+    func testCombinations() {
         
-        verifyCombinations(RHBCombinations(N: 4, K: 2), results:[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]])
         verifyCombinations(RHBCombinations(N: 2, K: 1), results:[[0],[1]])
         verifyCombinations(RHBCombinations(N: 3, K: 1), results:[[0],[1],[2]])
         verifyCombinations(RHBCombinations(N: 3, K: 2), results:[[0,1],[0,2],[1,2]])
         verifyCombinations(RHBCombinations(N: 4, K: 3), results:[[0,1,2],[0,1,3],[0,2,3],[1,2,3]])
-    }
-    
-    func testCombinationsNN() {
-
+        verifyCombinations(RHBCombinations(N: 4, K: 2), results:[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]])
         (1...100).forEach {
             verifyCombinations(RHBCombinations(N: $0, K: $0), results: [Array(0..<$0)])
         }
     }
     
-    func testCombinationsLoop43() {
+    func testCombinationsLoop() {
         
         let combinatons = RHBCombinations(N: 4, K: 3)
-        for i in 0..<combinatons.count {
+        (0..<combinatons.count).forEach {
             
-            let combination = combinatons[i]
-            print(i, combination)
+            print($0, combinatons[$0])
         }
     }
     
@@ -102,14 +93,10 @@ class Tests: XCTestCase {
         self.measure() {
 
             let combinatons = RHBCombinations(N: 12, K: 6)
-            for combinationIndex in 0..<combinatons.count {
+            (0..<combinatons.count).forEach {
                 
-                let combination = combinatons[combinationIndex]
+                let combination = combinatons[$0]
                 XCTAssert(combination.count == combinatons.K)
-                combination.forEach {
-                    
-                    XCTAssert($0 < combinatons.N)
-                }
                 XCTAssert(combination.sorted() == combination)
                 XCTAssert(Set(combination).sorted() == combination)
             }

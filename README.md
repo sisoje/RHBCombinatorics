@@ -8,10 +8,9 @@
 Following snippet:
 
         let combinatons = RHBCombinations(N: 4, K: 3)
-        for i in 0..<combinatons.count {
+        (0..<combinatons.count).forEach {
             
-            let combination = combinatons[i]
-            print(i, combination)
+            print($0, combinatons[$0])
         }
 Produces following output:
 
