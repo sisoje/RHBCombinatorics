@@ -5,6 +5,7 @@
 
 ## Looping trough combinations made easy
 
+### Combinations by index
 Following snippet:
 
         let combinatons = RHBCombinations(N: 4, K: 3)
@@ -19,6 +20,18 @@ Produces following output:
 1 [0, 1, 3]
 2 [0, 2, 3]
 3 [1, 2, 3]
+```
+### Iterating trough combinations
+Following snippet:
+
+        RHBCombinations(N: 4, K: 3).forEach { print($0) }
+Produces following output:
+
+```ruby
+[0, 1, 2]
+[0, 1, 3]
+[0, 2, 3]
+[1, 2, 3]
 ```
 
 ## Installation

@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RHBCombinatorics'
-  s.version          = '0.1.3'
-  s.summary          = 'Provide indexed access to combinations, for now.'
+  s.version          = '0.1.4'
+  s.summary          = 'Provide iterator and indexed access to combinations.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

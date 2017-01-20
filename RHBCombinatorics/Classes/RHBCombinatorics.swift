@@ -19,7 +19,7 @@ public func choose(N: Int, K: Int) -> Int {
     }
 }
 
-func firstElementInCombination(index:Int, N:Int, K:Int) -> (element:Int, countLow:Int) {
+public func firstElementInCombination(index:Int, N:Int, K:Int) -> (element:Int, countLow:Int) {
     
     if K == 1 {
         
@@ -46,11 +46,72 @@ func firstElementInCombination(index:Int, N:Int, K:Int) -> (element:Int, countLo
     return (NK, sum)
 }
 
-public struct RHBCombinations {
+public func nextCombination(combination: [Int], N: Int, K: Int) -> [Int]? {
+    
+    let K1 = K - 1
+    let N1 = N - 1
+    let foundIndex = (0...K1).first {
+        
+        return combination[K1-$0] < N1-$0
+    }
+    guard let index = foundIndex else {
+        
+        return nil
+    }
+    let digitIndex = K1 - index
+    return (0...K1).map {
+        
+        return ($0 < digitIndex) ? combination[$0] : combination[digitIndex] + ($0 - digitIndex) + 1
+    }
+}
+
+public struct RHBCombinationIterator : IteratorProtocol {
     
     public let N:Int
     public let K:Int
-    public let count:Int
+    var combination:[Int]?
+    init(N: Int, K: Int) {
+        
+        self.N = N
+        self.K = K
+        self.combination = Array(0..<K)
+    }
+    public mutating func next() -> [Int]? {
+
+        guard let result = self.combination else {
+            
+            return nil
+        }
+        self.combination = nextCombination(combination: result, N: self.N, K: self.K)
+        return result
+    }
+}
+
+public struct RHBCombinations : Sequence, Collection {
+    
+    public let N:Int
+    public let K:Int
+    public let count: Int
+    
+    public var endIndex: Int {
+        
+        return self.count
+    }
+    
+    public var startIndex: Int {
+        
+        return 0
+    }
+    
+    public func index(after i: Int) -> Int {
+        
+        return i + 1
+    }
+    
+    public func makeIterator() -> RHBCombinationIterator {
+        
+        return RHBCombinationIterator(N: self.N, K: self.K)
+    }
     
     public init(N:Int, K:Int) {
         

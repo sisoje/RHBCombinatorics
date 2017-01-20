@@ -78,7 +78,12 @@ class Tests: XCTestCase {
         }
     }
     
-    func testCombinationsLoop() {
+    func testCombinationsIterate() {
+        
+        RHBCombinations(N: 4, K: 3).forEach { print($0) }
+    }
+
+    func testCombinationsLoopByIndex() {
         
         let combinatons = RHBCombinations(N: 4, K: 3)
         (0..<combinatons.count).forEach {
