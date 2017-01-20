@@ -100,24 +100,21 @@ class Tests: XCTestCase {
     
     func testPerformanceIndexed() {
         
-        // This is an example of a performance test case.
+        let combinatons = self.combinatonsForPerformance
         self.measure() {
 
-            let combinatons = self.combinatonsForPerformance
             (0..<combinatons.count).forEach {
                 
-                let combination = combinatons[$0]
-                XCTAssert(combination.count == combinatons.K)
+                XCTAssert(combinatons[$0].count == combinatons.K)
             }
         }
     }
     
     func testPerformanceIterated() {
         
-        // This is an example of a performance test case.
+        let combinatons = self.combinatonsForPerformance
         self.measure() {
             
-            let combinatons = self.combinatonsForPerformance
             combinatons.forEach {
                 
                 XCTAssert($0.count == combinatons.K)
