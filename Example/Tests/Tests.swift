@@ -5,6 +5,7 @@ import RHBCombinatorics
 class Tests: XCTestCase {
     
     let combinatonsForPerformance = RHBCombinations(N: 15, K: 6)
+    let combinationsForPrinting = RHBCombinations(N: 5, K: 3)
 
     override func setUp() {
         super.setUp()
@@ -14,21 +15,6 @@ class Tests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
-    }
-    
-    func testChooseNKSums() {
-        
-        for N in 2...10 {
-            
-            for K in 2...N {
-                
-                let summed = (0...N-K).reduce(0) {
-                    
-                    $0 + choose(N: N - $1 - 1, K: K - 1)
-                }
-                XCTAssert(summed == choose(N: N, K: K))
-            }
-        }
     }
     
     func testFactoriel() {
@@ -47,6 +33,17 @@ class Tests: XCTestCase {
     
     func testChoose() {
         
+        for N in 2...10 {
+            
+            for K in 2...N {
+                
+                let summed = (0...N-K).reduce(0) {
+                    
+                    $0 + choose(N: N - $1 - 1, K: K - 1)
+                }
+                XCTAssert(summed == choose(N: N, K: K))
+            }
+        }
         (1...100).forEach {
             
             XCTAssert(choose(N:$0, K: $0) == 1)
@@ -73,12 +70,13 @@ class Tests: XCTestCase {
     
     func testCombinationsIterate() {
         
-        RHBCombinations(N: 4, K: 3).forEach { print($0) }
+        let combinatons = self.combinationsForPrinting
+        combinatons.forEach { print($0) }
     }
 
     func testCombinationsLoopByIndex() {
         
-        let combinatons = RHBCombinations(N: 4, K: 3)
+        let combinatons = self.combinationsForPrinting
         (0..<combinatons.count).forEach {
             
             print($0, combinatons[$0])
