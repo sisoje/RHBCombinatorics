@@ -34,9 +34,9 @@ Produces following output:
 [1, 2, 3]
 ```
 
-###Example application
+###Example application can make your dreams come true 😂
 
-Example application has a "powerball" combination generatior, it is generating combinations 5 of 69.
+Example application has a "Powerball" combination generatior, it is generating combinations 5 of 69.
 
 ## Installation
 
