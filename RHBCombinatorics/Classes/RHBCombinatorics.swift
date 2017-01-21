@@ -46,9 +46,9 @@ public func firstElementInCombination(index:Int, N:Int, K:Int) -> (element:Int, 
     return (NK, sum)
 }
 
-public func nextCombination(combination: [Int], N: Int, K: Int) -> [Int]? {
+public func nextCombination(combination: [Int], N: Int) -> [Int]? {
     
-    let K1 = K - 1
+    let K1 = combination.count - 1
     let N1 = N - 1
     let foundIndex = (0...K1).first {
         
@@ -68,12 +68,10 @@ public func nextCombination(combination: [Int], N: Int, K: Int) -> [Int]? {
 public struct RHBCombinationIterator : IteratorProtocol {
     
     let N:Int
-    let K:Int
     var combination:[Int]?
     init(N: Int, K: Int) {
         
         self.N = N
-        self.K = K
         self.combination = Array(0..<K)
     }
     public mutating func next() -> [Int]? {
@@ -82,7 +80,7 @@ public struct RHBCombinationIterator : IteratorProtocol {
             
             return nil
         }
-        self.combination = nextCombination(combination: result, N: self.N, K: self.K)
+        self.combination = nextCombination(combination: result, N: self.N)
         return result
     }
 }
