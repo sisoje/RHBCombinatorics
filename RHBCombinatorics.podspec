@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RHBCombinatorics'
-  s.version          = '0.1.6.1'
+  s.version          = '0.1.6.2'
   s.summary          = 'Provide iterator and indexed access to combinations.'
 
 # This description is used to generate tags and improve search results.

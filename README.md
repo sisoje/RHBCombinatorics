@@ -34,6 +34,10 @@ Produces following output:
 [1, 2, 3]
 ```
 
+##Example application
+
+Example application has a "powerball" combination generatior, it is generating combinations 5 of 69.
+
 ## Installation
 
 RHBCombinatorics is available through [CocoaPods](http://cocoapods.org). To install
