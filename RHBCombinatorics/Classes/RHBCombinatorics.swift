@@ -49,20 +49,17 @@ public func firstElementInCombination(index:Int, N:Int, K:Int) -> (element:Int, 
 public func nextCombination(combination: [Int], N: Int) -> [Int]? {
     
     let K1 = combination.count - 1
-    let N1 = N - 1
     let foundIndex = (0...K1).first {
         
-        return combination[K1-$0] < N1-$0
+        return combination[K1-$0] < N-$0-1
     }
     guard let index = foundIndex else {
         
         return nil
     }
     let digitIndex = K1 - index
-    return (0...K1).map {
-        
-        return ($0 < digitIndex) ? combination[$0] : combination[digitIndex] + ($0 - digitIndex) + 1
-    }
+    let digit = combination[digitIndex] + 1
+    return combination.prefix(upTo: digitIndex) + Array(digit...digit+index)
 }
 
 public struct RHBCombinationIterator : IteratorProtocol {
