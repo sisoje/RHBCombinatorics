@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     func randomize() {
         
         let random = arc4random_uniform(UInt32(self.powerball.count))
-        let combo = powerball[Int(random)]
-        (0..<self.powerball.K).forEach {
+        let combo = self.powerball[Int(random)]
+        (0..<powerball.K).forEach {
             
             let num = String(combo[$0] + 1)
             let button = self.buttons?[$0]
@@ -32,12 +32,12 @@ class ViewController: UIViewController {
         
         let viewframe = self.view.frame
         var size = viewframe.size
-        size.width /= CGFloat(powerball.K)
-        size.height /= CGFloat(powerball.K)
+        size.width /= CGFloat(self.powerball.K)
+        size.height /= CGFloat(self.powerball.K)
         
         let h = (viewframe.size.height - size.height) / 2
         
-        self.buttons = (0..<powerball.K).map {
+        self.buttons = (0..<self.powerball.K).map {
             
             let point = CGPoint(x: CGFloat($0)*size.width, y: h)
             let frame = CGRect(origin: point, size: size).insetBy(dx: 5, dy: 5)
