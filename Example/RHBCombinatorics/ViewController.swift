@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         
         let button = UIButton(frame: rrect)
         button.backgroundColor = UIColor.darkGray
-        button.setTitle(">>> POWER BALL <<<", for: UIControlState.normal)
+        button.setTitle("GENERATE POWERBALL", for: UIControlState.normal)
         button.setTitleColor(UIColor.red, for: UIControlState.highlighted)
         button.addTarget(self, action: #selector(self.randomize), for: UIControlEvents.touchUpInside)
         self.view.addSubview(button)
