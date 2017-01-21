@@ -24,8 +24,10 @@ class Tests: XCTestCase {
         XCTAssert(1 == factoriel(N: 1))
         XCTAssert(2 == factoriel(N: 2))
         XCTAssert(6 == factoriel(N: 3))
+#if arch(x86_64) || arch(arm64)
         XCTAssert(factoriel(N: 20) == 2432902008176640000)
-        (1...20).forEach {
+#endif
+        (1...10).forEach {
             
             XCTAssert(factoriel(N: $0-1)*$0 == factoriel(N: $0))
         }
