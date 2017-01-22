@@ -48,18 +48,15 @@ public func firstElementInCombination(index:Int, N:Int, K:Int) -> (element:Int, 
 
 public func nextCombination(combination: [Int], N: Int) -> [Int]? {
     
-    let K1 = combination.count - 1
-    let foundIndex = (0...K1).first {
+    let foundElementOptional = combination.enumerated().reversed().first {
         
-        return combination[K1-$0] < N-$0-1
+        return $1 < N-combination.count+$0
     }
-    guard let index = foundIndex else {
+    guard let foundElement = foundElementOptional else {
         
         return nil
     }
-    let digitIndex = K1 - index
-    let digit = combination[digitIndex] + 1
-    return combination.prefix(upTo: digitIndex) + Array(digit...digit+index)
+    return combination.prefix(foundElement.offset) + Array(foundElement.element+1...foundElement.element+combination.count-foundElement.offset)
 }
 
 public struct RHBCombinationIterator : IteratorProtocol {

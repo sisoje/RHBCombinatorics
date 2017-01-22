@@ -65,11 +65,6 @@
                BlueprintName = "RHBCombinatorics_Tests"
                ReferencedContainer = "container:RHBCombinatorics.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "TestsCombinations">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

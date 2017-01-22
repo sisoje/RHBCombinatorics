@@ -9,28 +9,24 @@
 
 public func nextPermutation(permutation: [Int]) -> [Int]? {
     
-    let N = permutation.count
-    let splitIndex_ = (1..<N).reversed().first {
+    let splitIndexOptional = (1..<permutation.count).reversed().first {
         
         return permutation[$0-1] < permutation[$0]
     }
-    guard let splitIndex = splitIndex_ else {
+    guard let splitIndex = splitIndexOptional else {
         
         return nil
     }
+    var prefixArray = permutation.prefix(splitIndex)
+    var suffixArray = permutation.suffix(from: splitIndex)
     
-    let indexForSwap1 = splitIndex-1
-    let indexForSwap2 = (splitIndex..<N).reversed().first {
+    let swapElement = suffixArray.enumerated().reversed().first {
         
-        return permutation[$0] > permutation[indexForSwap1]
+        return $1 > prefixArray.last!
     }!
     
-    var suffixArray = permutation.suffix(from: splitIndex)
-    suffixArray[indexForSwap2] = permutation[indexForSwap1]
-    
-    var prefixArray = permutation.prefix(splitIndex)
-    prefixArray[indexForSwap1] = permutation[indexForSwap2]
-    
+    suffixArray[splitIndex+swapElement.offset] = prefixArray.last!
+    prefixArray[splitIndex-1] = swapElement.element
     return prefixArray + suffixArray.reversed()
 }
 
