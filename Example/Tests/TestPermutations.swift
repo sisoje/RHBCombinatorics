@@ -23,7 +23,7 @@ class TestPermutations: XCTestCase {
     
     func testExample() {
         
-        RHBPermutations(N: 3).forEach { print($0) }
+        RHBPermutations(N: 3).enumerated().forEach { print($0, $1) }
     }
     
     func testPermutations() {

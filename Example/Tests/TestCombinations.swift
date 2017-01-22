@@ -73,7 +73,7 @@ class TestsCombinations: XCTestCase {
     func testCombinationsIterate() {
         
         let combinatons = self.combinationsForPrinting
-        combinatons.forEach { print($0) }
+        combinatons.enumerated().forEach { print($0, $1) }
     }
 
     func testCombinationsLoopByIndex() {
