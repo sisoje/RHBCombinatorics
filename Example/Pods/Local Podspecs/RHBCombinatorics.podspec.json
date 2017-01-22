@@ -1,22 +1,25 @@
 {
   "name": "RHBCombinatorics",
-  "version": "0.1.0",
-  "summary": "A short description of RHBCombinatorics.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/RHBCombinatorics",
+  "version": "0.1.6.4",
+  "summary": "Provide iterator and indexed access to combinations.",
+  "description": "Provide indexed access to combinations, iterate trough them, indexing...",
+  "homepage": "https://github.com/sisoje/RHBCombinatorics",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Lazar Otasevic": "lazar.otasevic@1und1.de"
+    "Lazar Otasevic": "redhotbits@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/RHBCombinatorics.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/sisoje/RHBCombinatorics.git",
+    "tag": "0.1.6.4"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "8.0",
+    "watchos": "2.0",
+    "osx": "10.9",
+    "tvos": "9.0"
   },
   "source_files": "RHBCombinatorics/Classes/**/*"
 }

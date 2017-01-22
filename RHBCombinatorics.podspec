@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RHBCombinatorics'
-  s.version          = '0.1.6.4'
-  s.summary          = 'Provide iterator and indexed access to combinations.'
+  s.version          = '0.1.7'
+  s.summary          = 'Provide iteration trough combinations and permutations.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Provide indexed access to combinations, iterate trough them, indexing...
+Provide indexed access to combinations and permutations, iterate trough them, indexing...
                        DESC
 
   s.homepage         = 'https://github.com/sisoje/RHBCombinatorics'

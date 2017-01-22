@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "93500C2AFEFB885AE473B8E04878F97F"
+               BlueprintIdentifier = "0D6FA7B95D8ED5A21BECFC0DDD54D3D2"
                BuildableName = "RHBCombinatorics.framework"
                BlueprintName = "RHBCombinatorics"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -65,6 +65,11 @@
                BlueprintName = "RHBCombinatorics_Tests"
                ReferencedContainer = "container:RHBCombinatorics.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "TestsCombinations">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

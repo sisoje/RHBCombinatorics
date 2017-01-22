@@ -2,10 +2,10 @@ import UIKit
 import XCTest
 import RHBCombinatorics
 
-class Tests: XCTestCase {
+class TestsCombinations: XCTestCase {
     
     let combinatonsForPerformance = RHBCombinations(N: 15, K: 6)
-    let combinationsForPrinting = RHBCombinations(N: 5, K: 3)
+    let combinationsForPrinting = RHBCombinations(N: 4, K: 3)
 
     override func setUp() {
         super.setUp()

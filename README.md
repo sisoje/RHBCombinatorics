@@ -3,8 +3,34 @@
 [![License](https://img.shields.io/cocoapods/l/RHBCombinatorics.svg?style=flat)](http://cocoapods.org/pods/RHBCombinatorics)
 [![Platform](https://img.shields.io/cocoapods/p/RHBCombinatorics.svg?style=flat)](http://cocoapods.org/pods/RHBCombinatorics)
 
-## Looping trough combinations made easy
+## Combinations and permutations made easy
 
+### Iterating trough combinations
+Following snippet:
+
+        RHBCombinations(N: 4, K: 3).forEach { print($0) }
+Produces following output:
+
+```ruby
+[0, 1, 2]
+[0, 1, 3]
+[0, 2, 3]
+[1, 2, 3]
+```
+###Iterating trough permutations
+Following snippet:
+
+        RHBPermutations(N: 3).forEach { print($0) }
+Produces following output:
+
+```ruby
+[0, 1, 2]
+[0, 2, 1]
+[1, 0, 2]
+[1, 2, 0]
+[2, 0, 1]
+[2, 1, 0]
+```
 ### Combinations by index
 Following snippet:
 
@@ -21,19 +47,6 @@ Produces following output:
 2 [0, 2, 3]
 3 [1, 2, 3]
 ```
-### Iterating trough combinations
-Following snippet:
-
-        RHBCombinations(N: 4, K: 3).forEach { print($0) }
-Produces following output:
-
-```ruby
-[0, 1, 2]
-[0, 1, 3]
-[0, 2, 3]
-[1, 2, 3]
-```
-
 ###Example application can make your dreams come true 😂
 
 Example application has a "Powerball" combination generatior, it is generating combinations 5 of 69.
