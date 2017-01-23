@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         
         let viewframe = self.view.frame
         var size = viewframe.size
+        let spacing = size.height/150
         size.width /= CGFloat(self.powerball.K+1)
         size.height = size.width
         
@@ -40,12 +41,12 @@ class ViewController: UIViewController {
         self.labels = (0...self.powerball.K).map {
             
             let point = CGPoint(x: CGFloat($0)*size.width, y: h)
-            let frame = CGRect(origin: point, size: size).insetBy(dx: 5, dy: 5)
+            let frame = CGRect(origin: point, size: size).insetBy(dx: spacing, dy: spacing)
             let label = UILabel(frame: frame)
             label.textAlignment = NSTextAlignment.center
             label.clipsToBounds = true
             label.layer.cornerRadius = frame.width/2
-            label.layer.borderWidth = frame.width*0.1
+            label.layer.borderWidth = spacing
             label.layer.borderColor = UIColor.darkGray.cgColor
             return label
         }
@@ -65,14 +66,14 @@ class ViewController: UIViewController {
 
         var rrect = CGRect(x: 0, y: h, width: viewframe.size.width, height: size.height)
         rrect.origin.y += size.height
-        rrect = rrect.insetBy(dx: 5, dy: 5)
+        rrect = rrect.insetBy(dx: spacing, dy: spacing)
         
         let button = UIButton(frame: rrect)
         button.backgroundColor = UIColor.darkGray
         button.setTitle("PLAY", for: UIControlState.normal)
         button.setTitleColor(UIColor.red, for: UIControlState.highlighted)
         button.addTarget(self, action: #selector(self.randomize), for: UIControlEvents.touchUpInside)
-        button.layer.cornerRadius = rrect.height / 4
+        button.layer.cornerRadius = spacing
         self.view.addSubview(button)
         
         self.randomize()
