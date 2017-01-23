@@ -47,9 +47,9 @@ Produces following output:
 2 [0, 2, 3]
 3 [1, 2, 3]
 ```
-###Example application can make your dreams come true 😂
+###Example application
 
-Example application has a "Powerball" combination generatior, it is generating combinations 5 of 69.
+Example application has a "Powerball" combination generatior, it is generating combinations 5 of 69. Basically it can make your dreams come true 😂
 
 ## Installation
 
