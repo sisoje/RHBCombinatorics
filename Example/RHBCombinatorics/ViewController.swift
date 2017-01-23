@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         let viewframe = self.view.frame
         var size = viewframe.size
         size.width /= CGFloat(self.powerball.K)
-        size.height /= CGFloat(self.powerball.K)
+        size.height = size.width
         
         let h = (viewframe.size.height - size.height) / 2
         
@@ -44,6 +44,7 @@ class ViewController: UIViewController {
             let button = UIButton(frame: frame)
             button.backgroundColor = UIColor.red
             button.tintColor = UIColor.yellow
+            button.layer.cornerRadius = size.width/2.25
             return button
         }
         
