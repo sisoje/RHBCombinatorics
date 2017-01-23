@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         }
 
         var rrect = CGRect(x: 0, y: h, width: viewframe.size.width, height: size.height)
-        rrect.origin.y -= size.height
+        rrect.origin.y += size.height
         rrect = rrect.insetBy(dx: 5, dy: 5)
         
         let button = UIButton(frame: rrect)
