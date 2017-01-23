@@ -4,12 +4,12 @@
 [![Platform](https://img.shields.io/cocoapods/p/RHBCombinatorics.svg?style=flat)](http://cocoapods.org/pods/RHBCombinatorics)
 
 ## Combinations and permutations made easy
-Indexed access and iteration is calculated on the fly, so there is no caching and no excess heap memory usage and they work in constant time.
+Indexed access and iteration is calculated on the fly. There is no caching and no excess memory usage and they work in constant time.
 ### Iterating trough combinations
 Following snippet:
 
         RHBCombinations(N: 4, K: 3).enumerated().forEach { print($0, $1) }
-Works in CONSTANT time and produces following output:
+Produces following output:
 
 ```ruby
 0 [0, 1, 2]
@@ -47,7 +47,7 @@ Produces following output:
 2 [0, 2, 3]
 3 [1, 2, 3]
 ```
-###Example application
+##Example application
 
 Example application has a "Powerball" combination generatior, it is generating combinations 5 of 69. Basically it can make your dreams come true 😂
 

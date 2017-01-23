@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RHBCombinatorics'
-  s.version          = '0.1.8'
+  s.version          = '0.1.8.1'
   s.summary          = 'Easy iteration trough combinations and permutations.'
 
 # This description is used to generate tags and improve search results.

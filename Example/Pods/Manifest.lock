@@ -1,5 +1,5 @@
 PODS:
-  - RHBCombinatorics (0.1.6.4)
+  - RHBCombinatorics (0.1.8.1)
 
 DEPENDENCIES:
   - RHBCombinatorics (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  RHBCombinatorics: 6f8c43e8505f6077cd5a68e2272f5da1d9ff7446
+  RHBCombinatorics: c9455f7d4edca11ab9d8c77c2ec5d00fe50c4dcc
 
 PODFILE CHECKSUM: b2b2fd61b5205504950af8f46a29c3533f912103
 

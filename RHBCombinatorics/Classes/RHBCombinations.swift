@@ -1,22 +1,22 @@
-public func factoriel(N: Int) -> Int {
-    
-    assert(N >= 0)
-    
-    return (1...max(1,N)).reduce(1) {
-        
-        $0 * $1
-    }
-}
+//
+//  RHBCombinations.swift
+//  Pods
+//
+//  Created by Lazar Otasevic on 1/23/17.
+//
+//
 
-public func choose(N: Int, K: Int) -> Int {
+public func nextCombination(combination: [Int], N: Int) -> [Int]? {
     
-    assert(K > 0)
-    assert(N >= K)
-    
-    return (1...K).reduce(1) {
+    let foundElementOptional = combination.enumerated().reversed().first {
         
-        $0 * (N - K + $1) / $1
+        return $1 < N-combination.count+$0
     }
+    guard let foundElement = foundElementOptional else {
+        
+        return nil
+    }
+    return combination.prefix(foundElement.offset) + Array(foundElement.element+1...foundElement.element+combination.count-foundElement.offset)
 }
 
 public func firstElementInCombination(index:Int, N:Int, K:Int) -> (element:Int, countLow:Int) {
@@ -46,19 +46,6 @@ public func firstElementInCombination(index:Int, N:Int, K:Int) -> (element:Int, 
     return (NK, sum)
 }
 
-public func nextCombination(combination: [Int], N: Int) -> [Int]? {
-    
-    let foundElementOptional = combination.enumerated().reversed().first {
-        
-        return $1 < N-combination.count+$0
-    }
-    guard let foundElement = foundElementOptional else {
-        
-        return nil
-    }
-    return combination.prefix(foundElement.offset) + Array(foundElement.element+1...foundElement.element+combination.count-foundElement.offset)
-}
-
 public struct RHBCombinationIterator : IteratorProtocol {
     
     let N:Int
@@ -69,7 +56,7 @@ public struct RHBCombinationIterator : IteratorProtocol {
         self.combination = Array(0..<K)
     }
     public mutating func next() -> [Int]? {
-
+        
         guard let result = self.combination else {
             
             return nil

@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11105CDEA9191C25753362CB49AE96A5 /* RHBCombinatorics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BB44319F13BCE9C7D5E8516CA747C4 /* RHBCombinatorics.swift */; };
+		087DFF0F89A38786DAF98DCC642BAC14 /* RHBCombinatorics-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F57F8A3F87892A01789EB66835F023EC /* RHBCombinatorics-dummy.m */; };
 		1419FFB1EE1142A01B7DF16EB0A06CE9 /* RHBCombinatorics-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62760FADE93FC40F4E8C9D4A985799A1 /* RHBCombinatorics-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		386F411C10D04C1323EBAF0953DF3404 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		3F8A4DA6FB96DB21857087A9B61510A6 /* RHBCombinatoricsCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F907B12CF1080820E15AD8CBF2C3D9 /* RHBCombinatoricsCore.swift */; };
 		4EA0CBFCADEE482F9F00066DA1481F87 /* Pods-RHBCombinatorics_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F62B21F2F98F1E0125C5CAE24BEA80EF /* Pods-RHBCombinatorics_Example-dummy.m */; };
+		513A0487F44467EA5FA6ED7F785EC597 /* RHBPermutations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF3A9C19F5BC799260EC73D6345749B /* RHBPermutations.swift */; };
 		62347D6805E23B25FA1A8EA215E2D4CF /* Pods-RHBCombinatorics_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA7DCB320527D2E555803915A982A771 /* Pods-RHBCombinatorics_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67B563CD3F08F59A81BFF20C02FCB5DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		7A40DD6AE77EC7DE61901EFBA1E14309 /* RHBCombinatorics-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F57F8A3F87892A01789EB66835F023EC /* RHBCombinatorics-dummy.m */; };
 		BF487E7AF233B7D2AD5ED01D60F46EB4 /* Pods-RHBCombinatorics_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EF189731DE83758A9F26B871ABD591E /* Pods-RHBCombinatorics_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBAFD93328B2866B7B831D14C4D6C15B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		FA4580B36F71B7A70A4AF7F226172F78 /* Pods-RHBCombinatorics_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9322BE6A5175B968AB3EA2E6E5E5D04 /* Pods-RHBCombinatorics_Tests-dummy.m */; };
-		FA670E95A58F573397D082291A21FFA3 /* RHBPermutations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD5ABD847C5206333FA283231A314F /* RHBPermutations.swift */; };
+		FA9A480C85D0C55C04AE95DC22B84E05 /* RHBCombinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD891867B8CBB5DB8AD071013D9988 /* RHBCombinations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +35,15 @@
 		00B13A26C50FD37209238969CE0D3FE7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		017524E2F9F355EED362B115D74FEA83 /* Pods-RHBCombinatorics_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RHBCombinatorics_Example-frameworks.sh"; sourceTree = "<group>"; };
 		0D1B4DD95E8B3F08AE90CE67163A0719 /* Pods-RHBCombinatorics_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RHBCombinatorics_Example.release.xcconfig"; sourceTree = "<group>"; };
+		19F907B12CF1080820E15AD8CBF2C3D9 /* RHBCombinatoricsCore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RHBCombinatoricsCore.swift; sourceTree = "<group>"; };
 		273820A55395DCB8A282BA4E0B9821DC /* Pods-RHBCombinatorics_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-RHBCombinatorics_Example.modulemap"; sourceTree = "<group>"; };
+		2DF3A9C19F5BC799260EC73D6345749B /* RHBPermutations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RHBPermutations.swift; sourceTree = "<group>"; };
 		3D279E15B962018DB8FD4F2BAFDDC4BB /* Pods-RHBCombinatorics_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RHBCombinatorics_Tests-resources.sh"; sourceTree = "<group>"; };
 		3FF4909EF0D41F25ECC9B427934B4765 /* RHBCombinatorics.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RHBCombinatorics.xcconfig; sourceTree = "<group>"; };
-		44BB44319F13BCE9C7D5E8516CA747C4 /* RHBCombinatorics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RHBCombinatorics.swift; sourceTree = "<group>"; };
 		5B179AD6704CC674035B1E9E4409A8B1 /* Pods-RHBCombinatorics_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RHBCombinatorics_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5DFAD045E34EA3DFAC47B48A2BAE87AE /* Pods-RHBCombinatorics_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RHBCombinatorics_Example-resources.sh"; sourceTree = "<group>"; };
 		62760FADE93FC40F4E8C9D4A985799A1 /* RHBCombinatorics-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RHBCombinatorics-umbrella.h"; sourceTree = "<group>"; };
-		75FD5ABD847C5206333FA283231A314F /* RHBPermutations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RHBPermutations.swift; sourceTree = "<group>"; };
+		64AD891867B8CBB5DB8AD071013D9988 /* RHBCombinations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RHBCombinations.swift; sourceTree = "<group>"; };
 		7EF189731DE83758A9F26B871ABD591E /* Pods-RHBCombinatorics_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RHBCombinatorics_Example-umbrella.h"; sourceTree = "<group>"; };
 		859E3C1F02A5B12FB0C6D1A21A19625F /* Pods-RHBCombinatorics_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RHBCombinatorics_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		8B2562466738BD5C3875A70A81CFDD77 /* RHBCombinatorics-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RHBCombinatorics-prefix.pch"; sourceTree = "<group>"; };
@@ -94,25 +96,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16A5AE9C1FC94212C53C9EAD9D68DA5F /* RHBCombinatorics */ = {
-			isa = PBXGroup;
-			children = (
-				2FB3BABA677D1BC02067C1ABEF766BC2 /* Classes */,
-			);
-			name = RHBCombinatorics;
-			path = RHBCombinatorics;
-			sourceTree = "<group>";
-		};
-		2FB3BABA677D1BC02067C1ABEF766BC2 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				44BB44319F13BCE9C7D5E8516CA747C4 /* RHBCombinatorics.swift */,
-				75FD5ABD847C5206333FA283231A314F /* RHBPermutations.swift */,
-			);
-			name = Classes;
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		3FDD1E1ABC1AF94A152381FAF0074E47 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,11 +187,20 @@
 		8D3D8679FFC4654FF7B53CB659D2E670 /* RHBCombinatorics */ = {
 			isa = PBXGroup;
 			children = (
-				16A5AE9C1FC94212C53C9EAD9D68DA5F /* RHBCombinatorics */,
+				B3ECDA09E8989FAE192E1410F0E1FE0D /* RHBCombinatorics */,
 				3FDD1E1ABC1AF94A152381FAF0074E47 /* Support Files */,
 			);
 			name = RHBCombinatorics;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		B3ECDA09E8989FAE192E1410F0E1FE0D /* RHBCombinatorics */ = {
+			isa = PBXGroup;
+			children = (
+				F34C0FF473934BCC420DE044D2BD432D /* Classes */,
+			);
+			name = RHBCombinatorics;
+			path = RHBCombinatorics;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -225,6 +217,17 @@
 				8D3D8679FFC4654FF7B53CB659D2E670 /* RHBCombinatorics */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F34C0FF473934BCC420DE044D2BD432D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				64AD891867B8CBB5DB8AD071013D9988 /* RHBCombinations.swift */,
+				19F907B12CF1080820E15AD8CBF2C3D9 /* RHBCombinatoricsCore.swift */,
+				2DF3A9C19F5BC799260EC73D6345749B /* RHBPermutations.swift */,
+			);
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +264,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95057DE36FEC93516D9D1D6140C621DE /* Build configuration list for PBXNativeTarget "RHBCombinatorics" */;
 			buildPhases = (
-				EBFE4E97EA10664D0415C7D38183E283 /* Sources */,
+				423A42F3648661ECEA4AD534C30AB1E0 /* Sources */,
 				CDAFD5CEF93290639BF802CAF798D6B8 /* Frameworks */,
 				D35B7B380E7A3A0E7FCBC48000136259 /* Headers */,
 			);
@@ -338,6 +341,17 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		423A42F3648661ECEA4AD534C30AB1E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9A480C85D0C55C04AE95DC22B84E05 /* RHBCombinations.swift in Sources */,
+				087DFF0F89A38786DAF98DCC642BAC14 /* RHBCombinatorics-dummy.m in Sources */,
+				3F8A4DA6FB96DB21857087A9B61510A6 /* RHBCombinatoricsCore.swift in Sources */,
+				513A0487F44467EA5FA6ED7F785EC597 /* RHBPermutations.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		672D8671913FCEFF9D2C1148B4B79E02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,16 +365,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4580B36F71B7A70A4AF7F226172F78 /* Pods-RHBCombinatorics_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EBFE4E97EA10664D0415C7D38183E283 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7A40DD6AE77EC7DE61901EFBA1E14309 /* RHBCombinatorics-dummy.m in Sources */,
-				11105CDEA9191C25753362CB49AE96A5 /* RHBCombinatorics.swift in Sources */,
-				FA670E95A58F573397D082291A21FFA3 /* RHBPermutations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

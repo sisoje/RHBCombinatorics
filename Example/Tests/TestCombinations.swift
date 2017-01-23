@@ -72,16 +72,17 @@ class TestsCombinations: XCTestCase {
     
     func testCombinationsIterate() {
         
-        let combinatons = self.combinationsForPrinting
-        combinatons.enumerated().forEach { print($0, $1) }
+        let combinations = self.combinationsForPrinting
+        combinations.enumerated().forEach { print($0, $1) }
     }
 
     func testCombinationsLoopByIndex() {
         
-        let combinatons = self.combinationsForPrinting
-        (0..<combinatons.count).forEach {
+        let combinations = self.combinationsForPrinting
+        (0..<combinations.count).forEach {
             
-            print($0, combinatons[$0])
+            let combination = combinations[$0]
+            print($0, combination)
         }
     }
     
@@ -100,24 +101,24 @@ class TestsCombinations: XCTestCase {
     
     func testPerformanceIndexed() {
         
-        let combinatons = self.combinatonsForPerformance
+        let combinations = self.combinatonsForPerformance
         self.measure() {
 
-            (0..<combinatons.count).forEach {
+            (0..<combinations.count).forEach {
                 
-                XCTAssert(combinatons[$0].count == combinatons.K)
+                XCTAssert(combinations[$0].count == combinations.K)
             }
         }
     }
     
     func testPerformanceIterated() {
         
-        let combinatons = self.combinatonsForPerformance
+        let combinations = self.combinatonsForPerformance
         self.measure() {
             
-            combinatons.forEach {
+            combinations.forEach {
                 
-                XCTAssert($0.count == combinatons.K)
+                XCTAssert($0.count == combinations.K)
             }
         }
     }
