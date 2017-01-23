@@ -4,32 +4,32 @@
 [![Platform](https://img.shields.io/cocoapods/p/RHBCombinatorics.svg?style=flat)](http://cocoapods.org/pods/RHBCombinatorics)
 
 ## Combinations and permutations made easy
-
+Indexed access and iteration is calculated on the fly, so there is no caching and no excess heap memory usage and they work in constant time.
 ### Iterating trough combinations
 Following snippet:
 
-        RHBCombinations(N: 4, K: 3).forEach { print($0) }
-Produces following output:
+        RHBCombinations(N: 4, K: 3).enumerated().forEach { print($0, $1) }
+Works in CONSTANT time and produces following output:
 
 ```ruby
-[0, 1, 2]
-[0, 1, 3]
-[0, 2, 3]
-[1, 2, 3]
+0 [0, 1, 2]
+1 [0, 1, 3]
+2 [0, 2, 3]
+3 [1, 2, 3]
 ```
 ###Iterating trough permutations
 Following snippet:
 
-        RHBPermutations(N: 3).forEach { print($0) }
+        RHBPermutations(N: 3).enumerated().forEach { print($0, $1) }
 Produces following output:
 
 ```ruby
-[0, 1, 2]
-[0, 2, 1]
-[1, 0, 2]
-[1, 2, 0]
-[2, 0, 1]
-[2, 1, 0]
+0 [0, 1, 2]
+1 [0, 2, 1]
+2 [1, 0, 2]
+3 [1, 2, 0]
+4 [2, 0, 1]
+5 [2, 1, 0]
 ```
 ### Combinations by index
 Following snippet:
