@@ -4,7 +4,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/RHBCombinatorics.svg?style=flat)](http://cocoapods.org/pods/RHBCombinatorics)
 
 ## Combinations and permutations made easy
-Indexed access and iteration is calculated on the fly. There is no caching and no excess memory usage and they work in constant time.
+Indexed access and iterations are calculated on the fly. There is no caching and no excess memory usage and they work in constant time.
 ### Iterating trough combinations
 Following snippet:
 
