@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             let button = UIButton(frame: frame)
             button.backgroundColor = UIColor.red
             button.tintColor = UIColor.yellow
-            button.layer.cornerRadius = size.width/2.25
+            button.layer.cornerRadius = frame.width/2
             return button
         }
         
