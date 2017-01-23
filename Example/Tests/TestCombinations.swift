@@ -122,4 +122,11 @@ class TestsCombinations: XCTestCase {
             }
         }
     }
+    
+    func testRandom() {
+        
+        let combinations = self.combinatonsForPerformance
+        let random = combinations.random()
+        XCTAssert(combinations[random.0] == random.1)
+    }
 }

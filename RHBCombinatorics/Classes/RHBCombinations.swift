@@ -120,6 +120,12 @@ public struct RHBCombinations : Sequence, Collection {
         
         return combinationAt(index:index)
     }
+    
+    public func random() -> (Int, [Int]) {
+    
+        let index = Int(arc4random_uniform(UInt32(self.count)))
+        return (index, self.combinationAt(index: index))
+    }
 }
 
 
