@@ -45,6 +45,8 @@ class ViewController: UIViewController {
             button.backgroundColor = UIColor.red
             button.tintColor = UIColor.yellow
             button.layer.cornerRadius = frame.width/2
+            button.layer.borderWidth = frame.width*0.1
+            button.layer.borderColor = UIColor.darkGray.cgColor
             return button
         }
         
@@ -62,6 +64,7 @@ class ViewController: UIViewController {
         button.setTitle("GENERATE POWERBALL", for: UIControlState.normal)
         button.setTitleColor(UIColor.red, for: UIControlState.highlighted)
         button.addTarget(self, action: #selector(self.randomize), for: UIControlEvents.touchUpInside)
+        button.layer.cornerRadius = rrect.height / 4
         self.view.addSubview(button)
         
         self.randomize()
