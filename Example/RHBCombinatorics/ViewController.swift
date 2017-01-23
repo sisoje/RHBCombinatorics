@@ -12,18 +12,18 @@ import RHBCombinatorics
 class ViewController: UIViewController {
 
     let powerball = RHBCombinations(N: 69, K: 5)
-    var buttons:Array<UIButton>?
+    let extraballCount = 26
+    var labels:Array<UILabel>?
     
     func randomize() {
         
         let random = arc4random_uniform(UInt32(self.powerball.count))
-        let combo = self.powerball[Int(random)]
-        (0..<powerball.K).forEach {
+        let combination = self.powerball[Int(random)]
+        labels?.prefix(powerball.K).enumerated().forEach {
             
-            let num = String(combo[$0] + 1)
-            let button = self.buttons?[$0]
-            button?.setTitle(num, for: UIControlState.normal)
+            $1.text = String(combination[$0] + 1)
         }
+        labels?.last?.text = String(arc4random_uniform(UInt32(self.extraballCount))+1)
     }
     
     override func viewDidLoad() {
@@ -32,25 +32,33 @@ class ViewController: UIViewController {
         
         let viewframe = self.view.frame
         var size = viewframe.size
-        size.width /= CGFloat(self.powerball.K)
+        size.width /= CGFloat(self.powerball.K+1)
         size.height = size.width
         
         let h = (viewframe.size.height - size.height) / 2
         
-        self.buttons = (0..<self.powerball.K).map {
+        self.labels = (0...self.powerball.K).map {
             
             let point = CGPoint(x: CGFloat($0)*size.width, y: h)
             let frame = CGRect(origin: point, size: size).insetBy(dx: 5, dy: 5)
-            let button = UIButton(frame: frame)
-            button.backgroundColor = UIColor.red
-            button.tintColor = UIColor.yellow
-            button.layer.cornerRadius = frame.width/2
-            button.layer.borderWidth = frame.width*0.1
-            button.layer.borderColor = UIColor.darkGray.cgColor
-            return button
+            let label = UILabel(frame: frame)
+            label.textAlignment = NSTextAlignment.center
+            label.clipsToBounds = true
+            label.layer.cornerRadius = frame.width/2
+            label.layer.borderWidth = frame.width*0.1
+            label.layer.borderColor = UIColor.darkGray.cgColor
+            return label
         }
         
-        self.buttons?.forEach {
+        self.labels?.prefix(self.powerball.K).forEach {
+            
+            $0.backgroundColor = UIColor.white
+            $0.tintColor = UIColor.black
+        }
+        self.labels?.last?.backgroundColor = UIColor.red
+        self.labels?.last?.tintColor = UIColor.white
+        
+        self.labels?.forEach {
             
             self.view.addSubview($0)
         }
@@ -61,7 +69,7 @@ class ViewController: UIViewController {
         
         let button = UIButton(frame: rrect)
         button.backgroundColor = UIColor.darkGray
-        button.setTitle("GENERATE POWERBALL", for: UIControlState.normal)
+        button.setTitle("PLAY", for: UIControlState.normal)
         button.setTitleColor(UIColor.red, for: UIControlState.highlighted)
         button.addTarget(self, action: #selector(self.randomize), for: UIControlEvents.touchUpInside)
         button.layer.cornerRadius = rrect.height / 4
